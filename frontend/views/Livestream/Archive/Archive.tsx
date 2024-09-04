@@ -172,7 +172,7 @@ function Archive() {
             <div className='relative overflow-y-auto h-[70vh]' style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                 <div className='flex flex-col gap-10 mt-5 overflow-y-auto pr-5'>
                     {VidArch.map((arch) => (
-                        <div key={arch.id} className='flex gap-10 flex-wrap lg:flex-nowrap'  onClick={() => setSelectedArchive(arch)}>
+                        <div key={arch.id} className={`flex gap-10 flex-wrap lg:flex-nowrap cursor-pointer ${arch.id === selectedArchive?.id ? 'bg-[#EFF4FF]' : ''}`}  onClick={() => setSelectedArchive(arch)}>
                             <div className='lg:w-[40%]'>
                                 <Image src={arch.vid} alt='hghsd' className='rounded-3xl'   />
                             </div>
@@ -186,7 +186,6 @@ function Archive() {
                         </div>
                     ))}
                 </div>
-                <div className='absolute left-0 right-0 bottom-0 h-20 bg-gradient-to-t from-[#EDF4FF] to-transparent pointer-events-none'></div>
             </div>
         </section>
     </section>
