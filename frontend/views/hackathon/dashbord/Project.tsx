@@ -400,6 +400,8 @@ const Project: React.FC = () => {
               </button>
             </div>
           </form>
+
+          // <div className="text-[#ff0000] text-[1.5em] m-auto">Submission Closed</div>
         )}
 
         {teamData && teamData.projects.length > 0 && (
